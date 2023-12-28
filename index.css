@@ -1,0 +1,900 @@
+/* ========================================================================================================================================================================================================================================================================== */
+/* Mobile */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button:active,
+btn:active {
+    background-color: #457ba0;
+}
+
+button:hover,
+btn:hover,
+price:hover {
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    background-color: rgb(250, 239, 226);
+}
+
+#divSearch {
+    margin-top: 2vh;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputAndButton {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoImg {
+    margin-right: 2vw;
+    width: 5vw;
+    height: 4vh;
+}
+
+#cartImg {
+    margin-left: 2vw;
+    width: 5vw;
+    height: 4vh;
+}
+
+#searchInput {
+    padding-left: 0.5vw;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 60vw;
+    height: 4vh;
+}
+
+
+#inputAndList {
+    display: flex;
+    flex-direction: column;
+}
+
+#btnSearch {
+    width: 17vw;
+    margin-left: 0.3vw;
+    height: 4vh;
+    font-size: 1.1rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+#numOfProductsOnCart {
+    margin-top: 1vw;
+}
+
+#listOfProductSearched {
+    width: 55vw;
+    list-style-type: none
+}
+
+#btnProducts {
+    gap: 2vw;
+}
+
+#btnAllProducts,
+#divRatingByPrice {
+    margin-left: 10vw;
+}
+
+.btnsProducts {
+    font-size: 1rem;
+    margin-top: 2vh;
+    width: 40vw;
+    height: 4vh;
+    border-radius: 5px;
+    background-color: black;
+    color: aliceblue;
+}
+
+#divAddProducts {
+    width: 100vw;
+    margin-top: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.divProducts {
+    position: relative;
+    margin-top: 2vh;
+    width: 90vw;
+    height: 70vh;
+    border-radius: 10px;
+    border: 5px solid #d7cccc86;
+}
+
+.titles {
+    font-size: 1.3rem;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.imgOfProducts {
+    margin-top: 2vh;
+    width: 100%;
+    height: 25vh;
+}
+
+.descriptionProducts {
+    text-align: justify;
+    word-spacing: -3px;
+    margin-top: 3vh;
+    font-size: 1.22rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+
+#btnsOfPrivateProducts {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 17vw;
+    left: 7.25vw;
+    gap: 2vw;
+}
+
+.btnsPerProduct {
+    width: 75vw;
+    height: 5vh;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 1.2rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.adminLogosDiv {
+    width: 75vw;
+    height: 5vh;
+    background-color: rgb(13, 35, 99);
+    color: aliceblue;
+    font-size: 1.2rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 4.5vw;
+    left: 7.25vw;
+}
+
+
+.adminLogos {
+    margin-left: 1vw;
+    width: 6vw;
+    height: 3.2vh;
+}
+
+#editBtn {
+    margin-left: 8vw;
+}
+
+#deleteBtn {
+    margin-left: 3vw;
+}
+
+
+.adminPermissionP {
+    margin-left: 6vw;
+    margin-right: 1vw;
+    font-size: 1.2rem;
+}
+
+.btnsProducts2 {
+    font-size: 1rem;
+    margin-top: 2vh;
+    width: 27vw;
+    height: 7.2vh;
+    border-radius: 5px;
+    background-color: rgb(2, 2, 121);
+    color: aliceblue;
+}
+
+#productsPerSubjesct {
+    display: flex;
+    gap: 2vw;
+    margin-left: 8vw;
+}
+
+#labelRatingByPrice {
+    font-size: 1.1rem;
+}
+
+#divRatingByPrice {
+    display: inline-block;
+    margin-top: 3vh;
+}
+
+#selectByPrice:hover {
+    cursor: pointer;
+}
+
+.price,
+#selectByPrice {
+    text-align: center;
+    margin-left: 0.5vw;
+    height: 2.5vh;
+    border-radius: 7px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: rgb(57, 4, 103);
+    /* border: 2px solid #000; */
+}
+
+
+
+.productsFromSearch:hover {
+    background-color: #150dab;
+    color: azure;
+}
+
+.productsFromSearch {
+    font-size: 1.1rem;
+    margin-left: -11vw;
+    width: 60vw;
+    margin-top: 0.2vh;
+    background-color: #ffffffb4;
+    border-radius: 5px;
+    /* border: 0.1px solid #0a0a0a49; */
+}
+
+/* =================CART PAGE==============  */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#h1CartPage {
+    margin-top: 5vh;
+    margin-bottom: 3vw;
+    color: darkred;
+    text-decoration: underline;
+}
+
+.divProduct {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    position: relative;
+}
+
+
+.title {
+    margin-top: 1.2vw;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.selectQuantity {
+    background-color: blanchedalmond;
+    margin-left: 1vw;
+    width: 11vw;
+    height: 5vw;
+    border-radius: 10px;
+    position: absolute;
+    right: 23vw;
+}
+
+.totalPricePerProductClass {
+    font-size: 1.2rem;
+    margin-top: 0.4vw;
+    position: absolute;
+    right: 7vw;
+}
+
+.cancelProductBtn {
+    background-color: rgb(20, 14, 14);
+    color: aliceblue;
+    width: 5vw;
+    height: 5vw;
+    margin-left: 2vw;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+}
+
+#totalPrice {
+    margin-top: 5vh;
+    font-size: 1.4rem;
+}
+
+#buyBtn,
+.mainPageBtn,
+.btnsAddToCartProductPage {
+    background-color: #fff;
+    margin-top: 2vh;
+    width: 20vw;
+    height: 5vh;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.mainPageBtn,
+.btnsAddToCartProductPage {
+    width: 30vw;
+}
+
+/* CSS of product details */
+
+#divMoreDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hProductDetails {
+    margin-top: 10vw;
+    display: relative;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#title {
+    margin-top: 3vw;
+}
+
+
+#description {
+    width: 80vw;
+    font-size: 1.1rem;
+    margin-top: 5vw;
+    text-align: center;
+}
+
+#imgOfProduct {
+    margin-top: 2vw;
+    width: 100vw;
+    height: 40vh;
+}
+
+#price {
+    margin-top: 5vw;
+    margin-bottom: 0vw;
+}
+
+/* Edit Page */
+#containerEditPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#h1EditPage {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 10vw;
+    font-size: 1.5rem;
+}
+
+.h3TitlesEditPage {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+}
+
+.editBtns {
+    border-radius: 5px;
+    margin-left: 1vw;
+    width: 10vw;
+    background-color: rgb(12, 10, 136);
+    color: white;
+}
+
+#mainPageEditPage {
+    border-radius: 5px;
+    padding: 1vw;
+    margin-top: 5vw;
+    font-size: 1rem;
+    width: 25vw;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* After "Buy" page  */
+
+#buyingTitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10vh;
+    width: 50vw;
+    text-align: center;
+}
+
+/* ========================================================================================================================================================================================================================================================================== */
+/* Tablet */
+
+@media (min-width:768px) {
+
+    .btnsProducts2,
+    .btnsProducts,
+    #btnSearch,
+    .productsFromSearch {
+        font-size: 1.2rem;
+    }
+
+    #selectByPrice {
+        width: 58vw;
+    }
+
+    #labelRatingByPrice {
+        font-size: 1.5rem;
+    }
+
+    .divProducts {
+        margin-top: 2vh;
+        height: 80vh;
+    }
+
+    .titles {
+        font-size: 2.5rem;
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    .descriptionProducts {
+        font-size: 1.5rem;
+    }
+
+    .imgOfProducts {
+        margin-top: 3vh;
+        height: 33vh;
+    }
+
+    #btnsOfPrivateProducts {
+        bottom: 13vw;
+    }
+
+    .btnsPerProduct {
+        font-size: 1.7rem;
+
+    }
+
+    .adminLogosDiv {
+        padding-top: 1vh;
+        text-align: center;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 4vw;
+        left: 7.25vw;
+    }
+
+
+    .adminLogos {
+        width: 5vw;
+        height: 3.2vh;
+    }
+
+    #editBtn {
+        margin-left: 8vw;
+    }
+
+    #deleteBtn {
+        margin-left: 3vw;
+    }
+
+
+    .adminPermissionP {
+        margin-left: 12vw;
+        font-size: 1.7rem;
+    }
+
+    /* =================CART PAGE==============  */
+    #h1CartPage {
+        font-size: 2.5rem;
+        margin-top: 5vh;
+        margin-bottom: 1vw;
+    }
+
+    #products {
+        font-size: 2.5rem;
+    }
+
+    .divProduct {
+        width: 70vw;
+    }
+
+    .divProduct {
+        margin-top: 3vw;
+    }
+
+    .title {
+        margin-top: 0vw;
+        font-size: 1.2rem;
+    }
+
+    .selectQuantity {
+        font-size: 1.2rem;
+        width: 6vw;
+        height: 3vh;
+        right: 17vw;
+    }
+
+    .totalPricePerProductClass {
+        font-size: 1.4rem;
+    }
+
+    .cancelProductBtn {
+        font-size: 1rem;
+        width: 3vw;
+        height: 3vh;
+        text-align: center;
+    }
+
+    #totalPrice {
+        font-size: 1.6rem;
+    }
+
+    #buyBtn,
+    .mainPageBtn,
+    .btnsAddToCartProductPage {
+        width: 22vw;
+        font-size: 1.5rem;
+    }
+
+    #buyBtn {
+        width: 15vw;
+    }
+
+    /* CSS of product details */
+    #category {
+        font-size: 1.8rem;
+    }
+
+    #hProductDetails {
+        margin-top: 8vh;
+    }
+
+    #description {
+        font-size: 1.6rem;
+    }
+
+    #imgOfProduct {
+        width: 80vw;
+    }
+
+    #price {
+        font-size: 1.5rem;
+    }
+
+
+    /* Edit Page */
+
+    #h1EditPage {
+        margin-top: 15vw;
+        font-size: 2.5rem;
+    }
+
+    .h3TitlesEditPage {
+        font-size: 2rem;
+        margin-top: 10vw;
+        margin-bottom: 1vw;
+    }
+
+    .inputsEditPage {
+        border-radius: 8px;
+        width: 40vw;
+        height: 5vw;
+    }
+
+    .editBtns {
+        font-size: 1.3rem;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-left: 1vw;
+        width: 10vw;
+        height: 5vw;
+    }
+
+    #mainPageEditPage {
+        border-radius: 15px;
+        padding: 1vw;
+        margin-top: 5vw;
+        font-size: 1.5rem;
+        width: 25vw;
+        height: 8vw;
+    }
+
+}
+
+
+/* ========================================================================================================================================================================================================================================================================== */
+/* Desktop */
+
+@media (min-width:1024px) {
+
+    #logoImg {
+        margin-right: 5vw;
+        width: 3vw;
+        height: 4vh;
+    }
+
+    #cartImg {
+        margin-left: 5vw;
+        width: 3vw;
+        height: 4vh;
+    }
+
+    #searchInput {
+        padding-left: 0.5vw;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        width: 60vw;
+        height: 5vh;
+    }
+
+    #btnSearch {
+        font-size: 1.2rem;
+        width: 10vw;
+        margin-left: 0.3vw;
+        height: 5vh;
+    }
+
+    #listOfProductSearched {
+        width: 49vw;
+    }
+
+    .btnsProducts {
+        font-size: 1.2rem;
+        margin-top: 2vh;
+        width: 17vw;
+        height: 5vh;
+
+    }
+
+    .divProducts {
+        margin-top: 2vh;
+        width: 27vw;
+        height: 78vh;
+        border: 3px solid #d7cccc86;
+    }
+
+    .titles {
+        font-size: 1.3em;
+    }
+
+    .imgOfProducts {
+        margin-top: 2vh;
+        height: 25vh;
+    }
+
+
+    .descriptionProducts {
+        text-align: center;
+        margin-top: 1vh;
+        font-size: 1.1rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    #btnsOfPrivateProducts {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 6vw;
+        left: 2vw;
+        gap: 2vw;
+    }
+
+
+    .btnsPerProduct {
+        width: 10.5vw;
+        height: 5vh;
+        background-color: blue;
+        color: aliceblue;
+        font-size: 1.1rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 0.5vh;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+
+    .btnsProducts2 {
+        font-size: 1.2rem;
+        width: 17vw;
+        height: 5vh;
+    }
+
+    #productsPerSubjesct {
+        display: flex;
+        gap: 2vw;
+        margin-left: 21vw;
+    }
+
+
+    #btnProducts {
+        margin-left: 5vw;
+    }
+
+    #divRatingByPrice {
+        display: inline-block;
+        margin-top: 3vh;
+        margin-left: 3vw;
+    }
+
+    .price,
+    #selectByPrice {
+        width: 15vw;
+        height: 5vh;
+    }
+
+    .adminLogosDiv {
+        width: 23vw;
+        padding-top: 1vh;
+        text-align: center;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 2vw;
+        left: 2vw;
+    }
+
+
+    .adminLogos {
+        margin-left: 0.3vw;
+        width: 6vw;
+        height: 3.2vh;
+    }
+
+    #editBtn {
+        margin-left: 1vw;
+    }
+
+    #deleteBtn {
+        margin-left: 0.3vw;
+    }
+
+
+    .adminPermissionP {
+        width: 50vw;
+        margin-left: 0vw;
+        font-size: 1.1rem;
+    }
+
+    /* =================CART PAGE==============  */
+
+    .divProduct {
+        width: 55vw;
+    }
+
+    .divProduct {
+        margin-top: 1vw;
+    }
+
+    .selectQuantity {
+        width: 4.5vw;
+        height: 4vh;
+        right: 7.5vw;
+        margin-right: 2.5vw;
+    }
+
+    .totalPricePerProductClass {
+        font-size: 1.2rem;
+        right: 3vw;
+    }
+
+    .cancelProductBtn {
+        width: 2vw;
+        height: 2vw;
+        font-size: 0.8rem;
+    }
+
+
+    #totalPrice {
+        font-size: 1.6rem;
+    }
+
+    #buyBtn {
+        width: 7vw;
+    }
+
+    .mainPageBtn,
+    .btnsAddToCartProductPage {
+        width: 12vw;
+    }
+
+    /* CSS of product details */
+
+    #hProductDetails {
+        margin-top: 2vw;
+    }
+
+    #title {
+        font-size: 1.8rem;
+        margin-top: 1vw;
+    }
+
+    #description {
+        font-size: 1.2rem;
+        margin-top: 2vw;
+        width: 50vw;
+        margin-bottom: 2vw;
+    }
+
+
+    #category {
+        font-size: 1.5rem;
+    }
+
+    #imgOfProduct {
+        width: 50vw;
+        height: 25vw;
+        margin-top: 0vw;
+    }
+
+    #price {
+        margin-top: 0.2vw;
+    }
+
+    #buyBtn,
+    .mainPageBtn,
+    .btnsAddToCartProductPage {
+        font-size: 1rem;
+    }
+
+    /* Edit Page */
+
+    #h1EditPage {
+        margin-top: 5vw;
+        font-size: 2rem;
+    }
+
+    .h3TitlesEditPage {
+        font-size: 1.5rem;
+        margin-top: 5vw;
+        margin-bottom: 0.1vw;
+    }
+
+    .inputsEditPage {
+        width: 25vw;
+        height: 3vw;
+    }
+
+    .editBtns {
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 10px;
+        margin-left: 0.2vw;
+        width: 7vw;
+        height: 3vw;
+    }
+
+    #mainPageEditPage {
+        margin-top: 3vw;
+        font-size: 1rem;
+        width: 11vw;
+        height: 4vw;
+    }
+}
